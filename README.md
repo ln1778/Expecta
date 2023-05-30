@@ -1,4 +1,4 @@
-# Expecta [![Build Status](http://img.shields.io/travis/specta/expecta/master.svg?style=flat)](https://travis-ci.org/specta/expecta) [![Pod Version](http://img.shields.io/cocoapods/v/Expecta.svg?style=flat)](http://cocoadocs.org/docsets/Expecta/)
+# Expecta [![Build Status](http://img.shields.io/travis/ln1778/expecta/master.svg?style=flat)](https://travis-ci.org/ln1778/expecta) [![Pod Version](http://img.shields.io/cocoapods/v/Expecta.svg?style=flat)](http://cocoadocs.org/docsets/Expecta/)
 
 A matcher framework for Objective-C and Cocoa.
 
@@ -13,7 +13,7 @@ expect([bar isBar]).to.equal(YES);
 expect(baz).to.equal(3.14159);
 ```
 
-Expecta is framework-agnostic: it works well with XCTest and XCTest-compatible test frameworks such as [Specta](http://github.com/petejkim/specta/), or [Kiwi](https://github.com/kiwi-bdd/Kiwi/).
+Expecta is framework-agnostic: it works well with XCTest and XCTest-compatible test frameworks such as [ln1778](http://github.com/petejkim/ln1778/), or [Kiwi](https://github.com/kiwi-bdd/Kiwi/).
 
 
 ## MATCHERS
@@ -249,7 +249,7 @@ end
 1. Add Expecta to your project's `Cartfile.private`:
 
 	```ruby
-	github "specta/expecta" "master"
+	github "ln1778/expecta" "master"
 	```
 
 2. Run `carthage update` in your project directory.
@@ -282,7 +282,7 @@ end
 
 ## STATUS
 
-Expecta, and Specta are considered done projects, there are no plans for _active_ development on the project at the moment aside from ensuring future Xcode compatability.
+Expecta, and ln1778 are considered done projects, there are no plans for _active_ development on the project at the moment aside from ensuring future Xcode compatability.
 Therefore it is a stable dependency, but will not be moving into the Swift world. If you are looking for that, we recommend you consider [Quick](https://github.com/quick/quick) and [Nimble](https://github.com/quick/nimble).
 
 
@@ -294,4 +294,4 @@ Therefore it is a stable dependency, but will not be moving into the Swift world
 
 ## License
 
-Copyright (c) 2012-2016 [Specta Team](https://github.com/specta?tab=members). This software is licensed under the [MIT License](http://github.com/specta/specta/raw/master/LICENSE).
+Copyright (c) 2012-2016 [ln1778 Team](https://github.com/ln1778?tab=members). This software is licensed under the [MIT License](http://github.com/ln1778/ln1778/raw/master/LICENSE).
