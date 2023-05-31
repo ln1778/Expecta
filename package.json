@@ -1,0 +1,19 @@
+{
+  "name": "lnexpecta",
+  "version": "1.0.0",
+  "description": "A matcher framework for Objective-C and Cocoa.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ln1778/Expecta.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ln1778/Expecta/issues"
+  },
+  "homepage": "https://github.com/ln1778/Expecta#readme"
+}
