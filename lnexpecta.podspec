@@ -1,12 +1,12 @@
 #
-#  Be sure to run `pod spec lint lnexpecta.podspec' to ensure this is a
+#  Be sure to run `pod spec lint Lnexpecta.podspec' to ensure this is a
 #  valid spec and to remove all comments including this before submitting the spec.
 #
 #  To learn more about Podspec attributes see https://guides.cocoapods.org/syntax/podspec.html
 #  To see working Podspecs in the CocoaPods repo see https://github.com/CocoaPods/Specs/
 #
 
-Pod::Spec.new do |spec|
+Pod::Spec.new do |s|
 
   # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -15,8 +15,8 @@ Pod::Spec.new do |spec|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  spec.name         = "lnexpecta"
-  s.version  = '1.0.6'
+  s.name  = "Lnexpecta"
+  s.version  = '0.0.1'
   s.license  = { :type => 'MIT', :file => 'LICENSE' }
   s.summary  = 'A matcher framework for Objective-C & Cocoa.'
   s.homepage = 'http://github.com/ln1778/expecta'
@@ -36,8 +36,8 @@ Pod::Spec.new do |spec|
 
   s.requires_arc = false
   s.ios.deployment_target = '12.0'
-  s.osx.deployment_target = '10.8'
-  s.tvos.deployment_target = '9.0'
+  s.osx.deployment_target = '10.13'
+  s.tvos.deployment_target = '11.0'
 
   s.frameworks = 'Foundation', 'XCTest'
   s.pod_target_xcconfig = { 'ENABLE_BITCODE' => 'NO' }
