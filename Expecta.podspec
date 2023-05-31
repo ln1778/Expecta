@@ -7,8 +7,6 @@ Pod::Spec.new do |spec|
   spec.name         = "Expecta"
   spec.version      = "1.0.10"
   spec.summary      = "Expecta."
-  spec.description  = <<-DESC
-                   DESC
 
   spec.homepage     = 'http://github.com/ln1778/expecta'
   # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
