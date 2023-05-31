@@ -1,7 +1,7 @@
 require 'tmpdir'
 require 'pathname'
 
-PROJECT = 'Lnexpecta.xcodeproj'
+PROJECT = 'Expecta.xcodeproj'
 CONFIGURATION = 'Release'
 
 NO_COLOR= "\033[0m"

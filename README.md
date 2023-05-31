@@ -1,10 +1,10 @@
-# Lnexpecta [![Build Status](http://img.shields.io/travis/ln1778/Lnexpecta/master.svg?style=flat)](https://travis-ci.org/ln1778/Lnexpecta) [![Pod Version](http://img.shields.io/cocoapods/v/Lnexpecta.svg?style=flat)](http://cocoadocs.org/docsets/Lnexpecta/)
+# Expecta [![Build Status](http://img.shields.io/travis/ln1778/Expecta/master.svg?style=flat)](https://travis-ci.org/ln1778/Expecta) [![Pod Version](http://img.shields.io/cocoapods/v/Expecta.svg?style=flat)](http://cocoadocs.org/docsets/Expecta/)
 
 A matcher framework for Objective-C and Cocoa.
 
 ## FEATURES
 
-The main advantage of using Lnexpecta over other matcher frameworks is that you do not have to specify the data types. Also, the syntax of Lnexpecta matchers is much more readable and does not suffer from parenthesitis.
+The main advantage of using Expecta over other matcher frameworks is that you do not have to specify the data types. Also, the syntax of Expecta matchers is much more readable and does not suffer from parenthesitis.
 
 ```objective-c
 expect(@"foo").to.equal(@"foo"); // `to` is a syntactic sugar and can be safely omitted.
@@ -13,7 +13,7 @@ expect([bar isBar]).to.equal(YES);
 expect(baz).to.equal(3.14159);
 ```
 
-Lnexpecta is framework-agnostic: it works well with XCTest and XCTest-compatible test frameworks such as [ln1778](http://github.com/petejkim/ln1778/), or [Kiwi](https://github.com/kiwi-bdd/Kiwi/).
+Expecta is framework-agnostic: it works well with XCTest and XCTest-compatible test frameworks such as [ln1778](http://github.com/petejkim/ln1778/), or [Kiwi](https://github.com/kiwi-bdd/Kiwi/).
 
 
 ## MATCHERS
@@ -92,14 +92,14 @@ Every matcher can be made to perform asynchronous testing by prepending `.will`,
 >
 >`expect(x).after(2.5).notTo.equal(42);` passes if x doesn't equal 42 after 2.5 seconds.
 
-The default timeout is 1.0 second and is used for all matchers if not otherwise specified. This setting can be changed by calling `[Lnexpecta setAsynchronousTestTimeout:x]`, where `x` is the desired timeout in seconds.
+The default timeout is 1.0 second and is used for all matchers if not otherwise specified. This setting can be changed by calling `[Expecta setAsynchronousTestTimeout:x]`, where `x` is the desired timeout in seconds.
 
 ```objective-c
 describe(@"Foo", ^{
   beforeAll(^{
     // All asynchronous matching using `will` and `willNot`
     // will have a timeout of 2.0 seconds
-    [Lnexpecta setAsynchronousTestTimeout:2];
+    [Expecta setAsynchronousTestTimeout:2];
   });
 
   it(@"will not be nil", ^{
@@ -123,12 +123,12 @@ You can fail a test by using the `failure` attribute. This can be used to test b
 
 ### WRITING NEW MATCHERS
 
-Writing a new matcher is easy with special macros provided by Lnexpecta. Take a look at how `.beKindOf()` matcher is defined:
+Writing a new matcher is easy with special macros provided by Expecta. Take a look at how `.beKindOf()` matcher is defined:
 
 `EXPMatchers+beKindOf.h`
 
 ```objective-c
-#import "Lnexpecta.h"
+#import "Expecta.h"
 
 EXPMatcherInterface(beKindOf, (Class expected));
 // 1st argument is the name of the matcher function
@@ -226,11 +226,11 @@ expect(lightSwitch).isTurnedOn();
 
 ## INSTALLATION
 
-You can setup Lnexpecta using [CocoaPods](http://github.com/CocoaPods/CocoaPods), [Carthage](https://github.com/Carthage/Carthage) or [completely manually](#setting-up-manually).
+You can setup Expecta using [CocoaPods](http://github.com/CocoaPods/CocoaPods), [Carthage](https://github.com/Carthage/Carthage) or [completely manually](#setting-up-manually).
 
 ### CocoaPods
 
-1. Add Lnexpecta to your project's `Podfile`:
+1. Add Expecta to your project's `Podfile`:
 
 ```ruby
 target :MyApp do
@@ -239,50 +239,50 @@ target :MyApp do
   target :MyAppTests do
     inherit! search_paths
 
-    pod 'Lnexpecta', '~> 1.0'
+    pod 'Expecta', '~> 1.0'
   end
 end
 ```
 
 ### Carthage
 
-1. Add Lnexpecta to your project's `Cartfile.private`:
+1. Add Expecta to your project's `Cartfile.private`:
 
 	```ruby
 	github "ln1778/expecta" "master"
 	```
 
 2. Run `carthage update` in your project directory.
-3. Drag the appropriate **Lnexpecta.framework** for your platform (located in `Carthage/Build/`) into your application’s Xcode project, and add it to your test target(s).
+3. Drag the appropriate **Expecta.framework** for your platform (located in `Carthage/Build/`) into your application’s Xcode project, and add it to your test target(s).
 
 
 2. Run `pod update` or `pod install` in your project directory.
 
 ### Setting Up Manually
 
-1. Clone Lnexpecta from Github.
+1. Clone Expecta from Github.
 2. Run `rake` in your project directory to build the frameworks and libraries.
 3. Add a Cocoa or Cocoa Touch Unit Testing Bundle target to your Xcode project if you don't already have one.
-4. For **OS X projects**, copy and add `Lnexpecta.framework` in the `Products/osx` folder to your project's test target.
+4. For **OS X projects**, copy and add `Expecta.framework` in the `Products/osx` folder to your project's test target.
 
-   For **iOS projects**, copy and add `Lnexpecta.framework` in the `Products/ios` folder to your project's test target.
+   For **iOS projects**, copy and add `Expecta.framework` in the `Products/ios` folder to your project's test target.
 
-   You can also use `libLnexpecta.a` if you prefer to link Lnexpecta as a static library — iOS 7.x and below require this.
+   You can also use `libExpecta.a` if you prefer to link Expecta as a static library — iOS 7.x and below require this.
 
 6. Add `-ObjC` and `-all_load` to the **Other Linker Flags** build setting for the test target in your Xcode project.
-7. You can now use Lnexpecta in your test classes by adding the following import:
+7. You can now use Expecta in your test classes by adding the following import:
 
 	```objective-c
-	@import Lnexpecta; // If you're using Lnexpecta.framework
+	@import Expecta; // If you're using Expecta.framework
 
 	// OR
 
-	#import <Lnexpecta/Lnexpecta.h> // If you're using the static library, or the framework
+	#import <Expecta/Expecta.h> // If you're using the static library, or the framework
 	```
 
 ## STATUS
 
-Lnexpecta, and ln1778 are considered done projects, there are no plans for _active_ development on the project at the moment aside from ensuring future Xcode compatability.
+Expecta, and ln1778 are considered done projects, there are no plans for _active_ development on the project at the moment aside from ensuring future Xcode compatability.
 Therefore it is a stable dependency, but will not be moving into the Swift world. If you are looking for that, we recommend you consider [Quick](https://github.com/quick/quick) and [Nimble](https://github.com/quick/nimble).
 
 
