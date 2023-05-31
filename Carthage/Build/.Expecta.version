@@ -1,0 +1,38 @@
+{
+  "Mac" : [
+
+  ],
+  "watchOS" : [
+
+  ],
+  "tvOS" : [
+
+  ],
+  "commitish" : "073ba8f8bd1eb315dc0ebdf5fad8f26a56596636",
+  "iOS" : [
+    {
+      "hash" : "de73dd76847cccf48314aa624149008e2f233e2ffa8cc24c084b03d9bcaf302c",
+      "name" : "Expecta",
+      "container" : "Expecta.xcframework",
+      "identifier" : "ios-arm64"
+    },
+    {
+      "hash" : "0443888bf9219262701a8c0190eae9af204959352bd4b7703dc233ba177cf00b",
+      "name" : "Expecta",
+      "container" : "Expecta.xcframework",
+      "identifier" : "ios-arm64_x86_64-simulator"
+    },
+    {
+      "hash" : "676432953d67d7e13769278b5f797cdcd738102b5c423d404602fdffab33507d",
+      "name" : "LnExpecta",
+      "container" : "LnExpecta.xcframework",
+      "identifier" : "ios-arm64"
+    },
+    {
+      "hash" : "a8cb230606411f9addbfdc99da674752b660e1bbb060d1caee31a49b91af03db",
+      "name" : "LnExpecta",
+      "container" : "LnExpecta.xcframework",
+      "identifier" : "ios-arm64_x86_64-simulator"
+    }
+  ]
+}
