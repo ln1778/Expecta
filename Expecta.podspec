@@ -19,8 +19,8 @@ Pod::Spec.new do |spec|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  spec.license      = "MIT (example)"
-  # spec.license      = { :type => "MIT", :file => "FILE_LICENSE" }
+  # spec.license      = "MIT (example)"
+  spec.license      = { :type => "MIT", :file => "LICENSE" }
 
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -34,9 +34,6 @@ Pod::Spec.new do |spec|
   #
 
   spec.author             = { "ln1778" => "465410291@qq.com" }
-  # Or just: spec.author    = "ln1778"
-  # spec.authors            = { "ln1778" => "465410291@qq.com" }
-  # spec.social_media_url   = "https://twitter.com/ln1778"
 
   spec.description = %{
     Expecta is a matcher framework for Objective-C and Cocoa. The main

@@ -6,9 +6,9 @@ FOUNDATION_EXPORT double ExpectaVersionNumber;
 //! Project version string for Expecta.
 FOUNDATION_EXPORT const unsigned char ExpectaVersionString[];
 
-#import <Lnexpecta/ExpectaObject.h>
-#import <Lnexpecta/ExpectaSupport.h>
-#import <Lnexpecta/EXPMatchers.h>
+#import <Expecta/ExpectaObject.h>
+#import <Expecta/ExpectaSupport.h>
+#import <Expecta/EXPMatchers.h>
 
 // Enable shorthand by default
 #define expect(...) EXP_expect((__VA_ARGS__))
