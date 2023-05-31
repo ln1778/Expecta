@@ -277,7 +277,7 @@ end
 
 	// OR
 
-	#import <Expecta/Expecta.h> // If you're using the static library, or the framework
+	#import <LnExpecta/Expecta.h> // If you're using the static library, or the framework
 	```
 
 ## STATUS

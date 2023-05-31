@@ -5,7 +5,7 @@ Pod::Spec.new do |spec|
 
 
   spec.name         = "LnExpecta"
-  spec.version      = "1.0.10"
+  spec.version      = "1.0.11"
   spec.summary      = "Expecta."
 
   spec.homepage     = 'http://github.com/ln1778/expecta'
