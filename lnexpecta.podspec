@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
   s.license  = { :type => 'MIT', :file => 'LICENSE' }
   s.summary  = 'A matcher framework for Objective-C & Cocoa.'
   s.homepage = 'http://github.com/ln1778/expecta'
-  s.author   = { 'Peter Jihoon Kim' => 'raingrove@gmail.com' }
+  s.author   = { 'ln1778' => '465410291@qq.com' }
 
   s.source   = { :git => 'https://github.com/ln1778/Expecta.git', :tag => "v#{s.version}" }
 
